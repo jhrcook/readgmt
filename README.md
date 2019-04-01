@@ -1,18 +1,29 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-readgmt
-=======
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![CRAN status](https://www.r-pkg.org/badges/version/readgmt)](https://cran.r-project.org/package=readgmt) [![Travis build status](https://travis-ci.org/jhrcook/readgmt.svg?branch=master)](https://travis-ci.org/jhrcook/readgmt) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jhrcook/readgmt?branch=master&svg=true)](https://ci.appveyor.com/project/jhrcook/readgmt) [![Coverage status](https://codecov.io/gh/jhrcook/readgmt/branch/master/graph/badge.svg)](https://codecov.io/github/jhrcook/readgmt?branch=master)
+# readgmt
 
-The goal of 'readgmt' is to easily import a GMT file from [MSigDB](http://software.broadinstitute.org/gsea/index.jsp) as a list of gene sets.
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/readgmt)](https://cran.r-project.org/package=readgmt)
+[![Travis build
+status](https://travis-ci.org/jhrcook/readgmt.svg?branch=master)](https://travis-ci.org/jhrcook/readgmt)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/jhrcook/readgmt?branch=master&svg=true)](https://ci.appveyor.com/project/jhrcook/readgmt)
+[![Coverage
+status](https://codecov.io/gh/jhrcook/readgmt/branch/master/graph/badge.svg)](https://codecov.io/github/jhrcook/readgmt?branch=master)
+
+The goal of ‘readgmt’ is to easily import a GMT file from
+[MSigDB](http://software.broadinstitute.org/gsea/index.jsp) as a list of
+gene sets.
 
 See the full documentation [here](https://jhrcook.github.io/readgmt).
 
-Installation
-------------
+## Installation
 
-You can install the released version of 'readgmt' from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of ‘readgmt’ from
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("readgmt")
@@ -24,10 +35,10 @@ Or get the development version with
 devtools::install_github("jhrcook/readgmt")
 ```
 
-Example
--------
+## Example
 
-Here is an example of reading in the KEGG gene set.
+Here is an example of reading in the KEGG gene set (downloaded on
+2019/04/01).
 
 ``` r
 library(readgmt)

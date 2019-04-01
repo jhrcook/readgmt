@@ -41,7 +41,7 @@ devtools::install_github("jhrcook/readgmt")
 
 ## Example
 
-Here is an example of reading in the KEGG gene set.
+Here is an example of reading in the KEGG gene set (downloaded on 2019/04/01).
 
 ```{r, eval = TRUE}
 library(readgmt)
