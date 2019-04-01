@@ -7,6 +7,8 @@ readgmt
 
 The goal of 'readgmt' is to easily import a GMT file from [MSigDB](http://software.broadinstitute.org/gsea/index.jsp) as a list of gene sets.
 
+See the full documentation [here](https://jhrcook.github.io/readgmt).
+
 Installation
 ------------
 
