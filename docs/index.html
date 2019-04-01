@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">readgmt</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -75,27 +75,27 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of ‘readgmt’ from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"readgmt"</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"readgmt"</span>)</a></code></pre></div>
 <p>Or get the development version with</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"jhrcook/readgmt"</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"jhrcook/readgmt"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>Here is an example of reading in the KEGG gene set.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(readgmt)
-kegg_path &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"c2.cp.kegg.v6.2.symbols.gmt.txt"</span>,
-                         <span class="dt">package =</span> <span class="st">"readgmt"</span>)
-kegg &lt;-<span class="st"> </span><span class="kw"><a href="reference/read_gmt.html">read_gmt</a></span>(kegg_path)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(kegg))
-<span class="co">#&gt; [1] "KEGG_GLYCOLYSIS_GLUCONEOGENESIS"              </span>
-<span class="co">#&gt; [2] "KEGG_CITRATE_CYCLE_TCA_CYCLE"                 </span>
-<span class="co">#&gt; [3] "KEGG_PENTOSE_PHOSPHATE_PATHWAY"               </span>
-<span class="co">#&gt; [4] "KEGG_PENTOSE_AND_GLUCURONATE_INTERCONVERSIONS"</span>
-<span class="co">#&gt; [5] "KEGG_FRUCTOSE_AND_MANNOSE_METABOLISM"         </span>
-<span class="co">#&gt; [6] "KEGG_GALACTOSE_METABOLISM"</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(kegg<span class="op">$</span>KEGG_COLORECTAL_CANCER)
-<span class="co">#&gt; [1] "JUN"   "CASP9" "RAF1"  "BIRC5" "APC2"  "RHOA"</span></code></pre></div>
+<p>Here is an example of reading in the KEGG gene set (downloaded on 2019/04/01).</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(readgmt)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">kegg_path &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"c2.cp.kegg.v6.2.symbols.gmt.txt"</span>,</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">                         <span class="dt">package =</span> <span class="st">"readgmt"</span>)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">kegg &lt;-<span class="st"> </span><span class="kw"><a href="reference/read_gmt.html">read_gmt</a></span>(kegg_path)</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(kegg))</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; [1] "KEGG_GLYCOLYSIS_GLUCONEOGENESIS"              </span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; [2] "KEGG_CITRATE_CYCLE_TCA_CYCLE"                 </span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt; [3] "KEGG_PENTOSE_PHOSPHATE_PATHWAY"               </span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt; [4] "KEGG_PENTOSE_AND_GLUCURONATE_INTERCONVERSIONS"</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; [5] "KEGG_FRUCTOSE_AND_MANNOSE_METABOLISM"         </span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; [6] "KEGG_GALACTOSE_METABOLISM"</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(kegg<span class="op">$</span>KEGG_COLORECTAL_CANCER)</a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt; [1] "JUN"   "CASP9" "RAF1"  "BIRC5" "APC2"  "RHOA"</span></a></code></pre></div>
 </div>
 </div>
   </div>
