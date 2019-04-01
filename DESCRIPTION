@@ -1,11 +1,23 @@
 Package: readgmt
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Read GMT gene set files from MSigDB
+Version: 0.0.0.9000
+Authors@R: person(c("Joshua", "H"), "Cook", email = "joshuacook0023@gmail.com",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0001-9815-6879"))
+Description: GMT files in MSigDB are easy to read, but it is a pain in the ass
+    to write a new set of functions every time I want to import them as list
+    objects. Therefore, this package is centered around a light-weight set of
+    functions to do just that.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    covr,
+    testthat,
+    spelling
+Language: en-US
+Imports:
+    purrr,
+    stringr
+RoxygenNote: 6.1.1
