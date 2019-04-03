@@ -3,3 +3,5 @@
 export(get_gmt_names)
 export(parse_gmt_lines)
 export(read_gmt)
+export(tidy_gmt)
+importFrom(magrittr,"%>%")

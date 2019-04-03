@@ -19,5 +19,8 @@ Suggests:
 Language: en-US
 Imports:
     purrr,
-    stringr
+    stringr,
+    tidyr,
+    tibble,
+    magrittr
 RoxygenNote: 6.1.1

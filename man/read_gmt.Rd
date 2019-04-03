@@ -4,10 +4,12 @@
 \alias{read_gmt}
 \title{Read a GMT file from MSigDB}
 \usage{
-read_gmt(file)
+read_gmt(file, tidy = FALSE)
 }
 \arguments{
 \item{file}{path to the downloaded GMT file}
+
+\item{tidy}{turn into a tidy tibble with \code{tidy_gmt}}
 }
 \value{
 returns a named list of the gene set

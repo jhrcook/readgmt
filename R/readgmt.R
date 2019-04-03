@@ -5,6 +5,7 @@
 #'     returns a list of named gene sets
 #'
 #' @param file path to the downloaded GMT file
+#' @param tidy turn into a tidy tibble with \code{tidy_gmt}
 #'
 #' @return returns a named list of the gene set
 #'
@@ -16,13 +17,14 @@
 #' head(kegg$KEGG_COLORECTAL_CANCER)
 #'
 #' @export read_gmt
-read_gmt <- function(file) {
+read_gmt <- function(file, tidy = FALSE) {
     con <- file(file, "r")
     gmt_lines <- readLines(file, warn = FALSE)
     close(con)
     rlist <- purrr::map(gmt_lines, parse_gmt_lines)
     rlist_names <- purrr::map_chr(gmt_lines, get_gmt_names)
     names(rlist) <- rlist_names
+    if (tidy) rlist <- tidy_gmt(rlist)
     return(rlist)
 }
 

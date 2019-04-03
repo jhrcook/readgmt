@@ -52,3 +52,13 @@ head(names(kegg))
 head(kegg$KEGG_COLORECTAL_CANCER)
 ```
 
+This can also be read in as a "tidy" tibble, or converted after the reading it in as a list.
+
+```{r, eval = TRUE}
+# read in as a tibble
+read_gmt(kegg_path, tidy = TRUE)
+
+# convert from list format to tibble
+tidy_gmt(kegg)
+```
+
