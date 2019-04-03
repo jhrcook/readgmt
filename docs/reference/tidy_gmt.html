@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Read a GMT file from MSigDB — read_gmt • readgmt</title>
+<title>Convert the GMT to a "tidy" tibble — tidy_gmt • readgmt</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,11 +30,11 @@
 
 
 
-<meta property="og:title" content="Read a GMT file from MSigDB — read_gmt" />
+<meta property="og:title" content="Convert the GMT to a "tidy" tibble — tidy_gmt" />
 
-<meta property="og:description" content="Reads a GMT file containing a gene set from
-    MSigDB and
-    returns a list of named gene sets" />
+<meta property="og:description" content="Sometimes, the data is wanted in a &quot;tidy&quot; format with each piece
+  of information as an individual row. tidy_gmt() converts the list
+  output of read_gmt() to a tibble." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -96,49 +96,38 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Read a GMT file from MSigDB</h1>
+    <h1>Convert the GMT to a "tidy" tibble</h1>
     
-    <div class="hidden name"><code>read_gmt.Rd</code></div>
+    <div class="hidden name"><code>tidy_gmt.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Reads a GMT file containing a gene set from
-    <a href='http://software.broadinstitute.org/gsea/index.jsp'>MSigDB</a> and
-    returns a list of named gene sets</p>
+    <p>Sometimes, the data is wanted in a "tidy" format with each piece
+  of information as an individual row. <code>tidy_gmt()</code> converts the list
+  output of <code><a href='read_gmt.html'>read_gmt()</a></code> to a tibble.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>read_gmt</span>(<span class='no'>file</span>, <span class='kw'>tidy</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>tidy_gmt</span>(<span class='no'>gmt</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>file</th>
-      <td><p>path to the downloaded GMT file</p></td>
-    </tr>
-    <tr>
-      <th>tidy</th>
-      <td><p>turn into a tidy tibble with <code>tidy_gmt</code></p></td>
+      <th>gmt</th>
+      <td><p>a gmt from <code><a href='read_gmt.html'>read_gmt()</a></code></p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>returns a named list of the gene set</p>
+    <p>a tibble with columns <code>"gene_set"</code> and <code>"gene"</code></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>kegg_path</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"c2.cp.kegg.v6.2.symbols.gmt.txt"</span>,
-                         <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"readgmt"</span>)
-<span class='no'>kegg</span> <span class='kw'>&lt;-</span> <span class='fu'>read_gmt</span>(<span class='no'>kegg_path</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/names'>names</a></span>(<span class='no'>kegg</span>))</div><div class='output co'>#&gt; [1] "KEGG_GLYCOLYSIS_GLUCONEOGENESIS"              
-#&gt; [2] "KEGG_CITRATE_CYCLE_TCA_CYCLE"                 
-#&gt; [3] "KEGG_PENTOSE_PHOSPHATE_PATHWAY"               
-#&gt; [4] "KEGG_PENTOSE_AND_GLUCURONATE_INTERCONVERSIONS"
-#&gt; [5] "KEGG_FRUCTOSE_AND_MANNOSE_METABOLISM"         
-#&gt; [6] "KEGG_GALACTOSE_METABOLISM"                    </div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>kegg</span>$<span class='no'>KEGG_COLORECTAL_CANCER</span>)</div><div class='output co'>#&gt; [1] "JUN"   "CASP9" "RAF1"  "BIRC5" "APC2"  "RHOA" </div><div class='input'>
+    <pre class="examples"><div class='input'># TODO
+
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

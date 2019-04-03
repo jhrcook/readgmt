@@ -2,6 +2,7 @@ reference:
 - title: Read a GMT file
   contents:
   - '`read_gmt`'
+  - '`tidy_gmt`'
 
 - title: utilities
   contents:
