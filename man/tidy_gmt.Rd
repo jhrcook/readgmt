@@ -18,6 +18,9 @@ Sometimes, the data is wanted in a "tidy" format with each piece
   output of \code{read_gmt()} to a tibble.
 }
 \examples{
-# TODO
+kegg_path <- system.file("extdata", "c2.cp.kegg.v6.2.symbols.gmt.txt",
+                          package = "readgmt")
+kegg <- read_gmt(kegg_path)
+tidy_gmt(kegg)
 
 }

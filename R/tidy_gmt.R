@@ -9,7 +9,10 @@
 #' @return a tibble with columns \code{"gene_set"} and \code{"gene"}
 #'
 #' @examples
-#' # TODO
+#' kegg_path <- system.file("extdata", "c2.cp.kegg.v6.2.symbols.gmt.txt",
+#'                           package = "readgmt")
+#' kegg <- read_gmt(kegg_path)
+#' tidy_gmt(kegg)
 #'
 #' @importFrom magrittr %>%
 #' @export tidy_gmt
