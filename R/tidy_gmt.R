@@ -18,6 +18,8 @@
 #' @export tidy_gmt
 tidy_gmt <- function(gmt) {
     tib <- tibble::enframe(gmt, name = "gene_set", value = "gene") %>%
-        tidyr::unnest()
+        tidyr::unnest(cols = gene)
     return(tib)
 }
+
+utils::globalVariables(c("gene"), add = TRUE)
